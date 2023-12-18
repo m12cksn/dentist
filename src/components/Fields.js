@@ -65,7 +65,10 @@ const Fields = () => {
         </h1>
         <div className="py-5 grid gap-7 md:mt-10 place-content-center md:grid-cols-2 lg:grid-cols-3 ">
           {fields.map((field, index) => (
-            <div className="bg-white px-5 sm:px-7 shadow rounded-md pt-5 sm:pt-7 pb-8 sm:pb-10 ">
+            <div
+              key={index}
+              className="bg-white px-5 sm:px-7 shadow rounded-md pt-5 sm:pt-7 pb-8 sm:pb-10 "
+            >
               <Image
                 className="w-24 "
                 src={field.img}

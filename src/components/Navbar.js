@@ -14,24 +14,20 @@ const Navbar = () => {
       title: "Home",
     },
     {
-      link: "/dental",
-      title: "Dental",
+      link: "/about",
+      title: "About",
     },
     {
-      link: "/destination",
-      title: "Destination",
+      link: "/service",
+      title: "Service",
     },
     {
-      link: "/pages",
-      title: "Pages",
+      link: "/packages",
+      title: "Packages",
     },
     {
-      link: "/blog",
+      link: "/news",
       title: "Blog",
-    },
-    {
-      link: "/contact",
-      title: "Contact",
     },
   ];
 
@@ -41,7 +37,7 @@ const Navbar = () => {
   return (
     <div className=" w-full  md:shadow-none  z-40 ">
       <header className="md:rounded-lg  top-5   w-full ease-in-out duration-500  z-50">
-        <nav className="2xl:max-w-7xl  lg:pt-14 xl:max-w-7xl lg:max-w-5xl  md:rounded-lg container   flex justify-between items-center py-5 md:py-6 lg:py-6 px-6 xl:px-0 md:px-8 lg:px-10">
+        <nav className="2xl:max-w-7xl  lg:pt-14 xl:max-w-7xl lg:max-w-5xl  md:rounded-lg container   flex justify-between items-center  py-5 md:py-6 lg:py-6 px-6 xl:px-0 md:px-8 lg:px-10">
           {/* ==== Menu Desktop ====  */}
           <Link href="/" className="flex items-center  rounded-full">
             <Image
@@ -58,14 +54,23 @@ const Navbar = () => {
               {menus.map((menu, index) => (
                 <Link
                   key={index}
-                  className=" text-slate-600 lg:font-semibold hover:text-slate-900 ease-in-out duration-150 transition-all text-xl  md:text-[1.1rem]"
+                  className=" text-slate-600  py-2 px-3 rounded-2xl border-teks border-2 lg:font-semibold hover:text-slate-900 ease-in-out duration-150 transition-all text-xl  md:text-[1.1rem]"
                   href={menu.link}
                 >
                   <h1>{menu.title}</h1>
                 </Link>
               ))}
             </div>
+
             {/* <div className=" hidden lg:flex items-center gap-7"></div> */}
+          </div>
+          <div className="">
+            <Link
+              className="border-b-2 border-spacing-5 hover:border-slate-900 transition-all duration-[1200ms] ease-in text-slate-600 lg:font-semibold md:text-[1.1rem]"
+              href=""
+            >
+              Get Consultation
+            </Link>
           </div>
 
           {/* ==== Menu Mobile ====  */}
